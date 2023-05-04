@@ -37,13 +37,3 @@ src/
 tmp/ (一時フォルダ。.pklとかはここに配置される)
 tools/ (その他ツールのフォルダ)
 ```
-
-# TODO:
-## document
-### 終わっていないやつ
-
-デプロイ手順
-
-## デプロイ
-
-### serverless Framework周り
