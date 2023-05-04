@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 
-import traceback
 import multiprocessing
+import traceback
 
 # 型
 from typing import Any, Callable
@@ -22,7 +22,8 @@ lambdaで通常のmultiprocessingは使用できないため、自前で用意�
 
 
 【使用例】
-from common.aws.lambda_multi_processing import call_multi_processing, multi_processing_function
+from common.aws.lambda_multi_processing
+import call_multi_processing, multi_processing_function
 
 def func1(arg1, arg2):
     print(arg1, arg2)
@@ -51,9 +52,9 @@ print(res_list)
 """
 
 
-def call_multi_processing(function: Callable,
-                          args: list[tuple],
-                          max_process: int = MAX_PROCESS) -> list:
+def call_multi_processing(
+    function: Callable, args: list[tuple], max_process: int = MAX_PROCESS
+) -> list:
     """マルチプロセスを実行する
 
     Args:
@@ -77,10 +78,7 @@ def call_multi_processing(function: Callable,
         # 引数作成
         process_args = list(arg)
         process_args.insert(0, child_conn)
-        processes.append(multiprocessing.Process(
-            target=function,
-            args=process_args
-        ))
+        processes.append(multiprocessing.Process(target=function, args=process_args))
 
         # 実行できる最大数で処理を実行
         if (cnt % max_process == 0) or len(args) <= cnt:

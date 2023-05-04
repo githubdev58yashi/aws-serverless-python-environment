@@ -79,8 +79,10 @@ class LocalFileHandler(Singleton):
 
         Args:
             filename (str): ファイル名(基底パス以降のパス含む)
-            sse_customer_key (Union[str, None], optional): 暗号化キー. Defaults to None.
-            sse_customer_algorithm (Union[str, None], optional): 暗号化方式. Defaults to SSE_CUSTOMER_ALGORITHM.
+            sse_customer_key (Union[str, None], optional):
+                暗号化キー. Defaults to None.
+            sse_customer_algorithm (Union[str, None], optional):
+                暗号化方式. Defaults to SSE_CUSTOMER_ALGORITHM.
 
         Returns:
             Any: バイナリ
@@ -104,8 +106,10 @@ class LocalFileHandler(Singleton):
         Args:
             filename (str): ファイル名(基底パス以降のパス含む)
             encoding (str): 文字コード
-            sse_customer_key (Union[str, None], optional): 暗号化キー. Defaults to None.
-            sse_customer_algorithm (Union[str, None], optional): 暗号化方式. Defaults to SSE_CUSTOMER_ALGORITHM.
+            sse_customer_key (Union[str, None], optional):
+                暗号化キー. Defaults to None.
+            sse_customer_algorithm (Union[str, None], optional):
+                暗号化方式. Defaults to SSE_CUSTOMER_ALGORITHM.
 
         Returns:
             Any: ファイルの中身
@@ -132,8 +136,10 @@ class LocalFileHandler(Singleton):
             filename (str): ファイル名(基底パス以降のパス含む)
             encoding (str): 文字コード
             has_header (bool): ヘッダー行として1行目を読み込むか
-            sse_customer_key (Union[str, None], optional): 暗号化キー. Defaults to None.
-            sse_customer_algorithm (Union[str, None], optional): 暗号化方式. Defaults to SSE_CUSTOMER_ALGORITHM.
+            sse_customer_key (Union[str, None], optional):
+                暗号化キー. Defaults to None.
+            sse_customer_algorithm (Union[str, None], optional):
+                暗号化方式. Defaults to SSE_CUSTOMER_ALGORITHM.
 
         Returns:
             list: list
@@ -162,8 +168,10 @@ class LocalFileHandler(Singleton):
             filename (str): ファイル名(基底パス以降のパス含む)
             encoding (str): 文字コード
             has_header (bool): ヘッダー行として1行目を読み込むか
-            sse_customer_key (Union[str, None], optional): 暗号化キー. Defaults to None.
-            sse_customer_algorithm (Union[str, None], optional): 暗号化方式. Defaults to SSE_CUSTOMER_ALGORITHM.
+            sse_customer_key (Union[str, None], optional):
+                暗号化キー. Defaults to None.
+            sse_customer_algorithm (Union[str, None], optional):
+                暗号化方式. Defaults to SSE_CUSTOMER_ALGORITHM.
 
         Returns:
             Any: ファイルによる
@@ -189,8 +197,10 @@ class LocalFileHandler(Singleton):
             filename (str): ファイル名(基底パス以降のパス含む)
             encoding (str): 文字コード
             has_header (bool): ヘッダー行として1行目を読み込むか
-            sse_customer_key (Union[str, None], optional): 暗号化キー. Defaults to None.
-            sse_customer_algorithm (Union[str, None], optional): 暗号化方式. Defaults to SSE_CUSTOMER_ALGORITHM.
+            sse_customer_key (Union[str, None], optional):
+                暗号化キー. Defaults to None.
+            sse_customer_algorithm (Union[str, None], optional):
+                暗号化方式. Defaults to SSE_CUSTOMER_ALGORITHM.
 
         Returns:
             Any: ファイルによる
@@ -216,8 +226,10 @@ class LocalFileHandler(Singleton):
         Args:
             local_filename (str): ファイル名(パス含む)
             target_filename (str): ファイル名(基底パス以降のパス含む)
-            sse_customer_key (Union[str, None], optional): 暗号化キー. Defaults to None.
-            sse_customer_algorithm (Union[str, None], optional): 暗号化方式. Defaults to SSE_CUSTOMER_ALGORITHM.
+            sse_customer_key (Union[str, None], optional):
+                暗号化キー. Defaults to None.
+            sse_customer_algorithm (Union[str, None], optional):
+                暗号化方式. Defaults to SSE_CUSTOMER_ALGORITHM.
         """
 
         obj = self.read(local_filename, sse_customer_key, sse_customer_algorithm)
@@ -237,8 +249,10 @@ class LocalFileHandler(Singleton):
         Args:
             data (bytes): バイナリデータ
             target_filename (str): ファイル名(バケット以降のパス含む)
-            sse_customer_key (Union[str, None], optional): 暗号化キー. Defaults to None.
-            sse_customer_algorithm (Union[str, None], optional): 暗号化方式. Defaults to SSE_CUSTOMER_ALGORITHM.
+            sse_customer_key (Union[str, None], optional):
+                暗号化キー. Defaults to None.
+            sse_customer_algorithm (Union[str, None], optional):
+                暗号化方式. Defaults to SSE_CUSTOMER_ALGORITHM.
         """
 
         self.make_dir(os.path.dirname(target_filename))
