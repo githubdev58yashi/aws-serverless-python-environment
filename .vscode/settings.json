@@ -1,0 +1,86 @@
+{
+
+  // path
+  "terminal.integrated.env.linux": {
+    "PYTHONPATH": "${workspaceFolder}/src"
+  },
+  // インテリセンスを有効にする
+  "python.autoComplete.extraPaths": [
+    "${workspaceFolder}/src/"
+  ],
+  // エクスプローラーから非表示にする
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.coverage": true,
+    "**/.pytest_cache": true,
+    "**/htmlcov/**/*[!.html]": true, // pytest-cov
+    "**/.mypy_cache": true,
+    "**/__init__.py": true
+  },
+  "editor.rulers": [
+    88,
+    100,
+    120
+  ],
+  "editor.tabSize": 4,
+  "editor.minimap.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  // 折り返さない
+  "editor.wordWrap": "off",
+  // 行末のスペース削除
+  "files.trimTrailingWhitespace": true,
+  // 最後に改行する
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "[python]": {
+    //Tabをスペースキーとして変換
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": true,
+    "editor.tabSize": 4,
+    // black isort
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    }
+  },
+  "python.formatting.provider": "black",
+  // isort
+  "isort.args": [
+    "--profile=black"
+  ],
+  // flake8
+  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true,
+  "python.linting.flake8Args": [
+    "--max-line-length=88",
+    "--max-complexity",
+    "20"
+  ],
+  // mypy
+  "python.linting.mypyEnabled": true,
+  "python.linting.mypyArgs": [
+    "--ignore-missing-imports",
+    "--follow-imports=silent",
+    "--show-column-numbers",
+    "--check-untyped-defs"
+  ],
+  // autoDocString
+  "autoDocstring.docstringFormat": "google",
+  "cSpell.words": [
+    "boto3",
+    "botocore",
+    "dateutil",
+    "debugpy",
+    "kargs",
+    "lfhw",
+    "pynamodb",
+    "pytz"
+  ],
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/src/",
+    "/home/user/.local/lib/python3.9/site-packages"
+  ],
+  "editor.fontFamily": "'UDEV Gothic JPDOC'",
+  "editor.fontSize": 14
+}

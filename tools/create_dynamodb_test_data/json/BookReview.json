@@ -1,0 +1,27 @@
+[
+  {
+    "userId": "user1",
+    "rating": 4,
+    "review": "面白かったです。"
+  },
+  {
+    "userId": "user1",
+    "rating": 2,
+    "review": "期待外れでした。"
+  },
+  {
+    "userId": "user1",
+    "rating": 5,
+    "review": "最高でした！"
+  },
+  {
+    "userId": "user2",
+    "rating": 3,
+    "review": "まあまあでした。"
+  },
+  {
+    "userId": "user3",
+    "rating": 4,
+    "review": "面白かったです。"
+  }
+]

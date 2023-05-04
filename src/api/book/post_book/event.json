@@ -1,0 +1,10 @@
+{
+    "body": {
+        "title": "Error 1",
+        "author": "author1",
+        "publisher": "publisher1",
+        "publishedDate": "2023-04-21",
+        "isbn": "9999999999999",
+        "coverImageUrl": "https://example.com/cover/book1.jpg"
+    }
+}

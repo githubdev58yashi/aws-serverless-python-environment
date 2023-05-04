@@ -1,0 +1,4 @@
+label,level,message
+"logMessage1","WARN","何かしらのエラー{}{}"
+"logMessage2","WARN","何かしらのエラー2{}{}"
+"NgTitleError","WARN","登録できないタイトルが設定されています。{}"

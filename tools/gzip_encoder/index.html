@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>gzip encoder</title>
+    <link rel="stylesheet" href="./css/mvp.css">
+    <script src="./js/pako.min.js"></script>
+    <script src="./js/gzip_encoder.js"></script>
+</head>
+<style>
+    div {
+        padding: 1rem;
+    }
+</style>
+<body>
+    <div id="input">
+        <p>VSCDOEのプレビュー表示だとバグるので、ブラウザで開くことをお勧めします。</p>
+        <label for="inputMode">変換</label>
+        <select id="inputMode">
+            <option value="encode" selected>encode</option>
+            <option value="decode">decode</option>
+        </select>
+        <label for="inputTextArea">変換したい文字列</label>
+        <textarea id="inputTextArea" cols="30" rows="10"></textarea>
+
+        <button onclick="runGzipEncoder()">変換</button>
+    </div>
+    <hr>
+    <div id="output">
+        <label for="outputTextArea">変換後文字列</label>
+        <textarea id="outputTextArea" cols="30" rows="10"></textarea>
+        <button onclick="copyTextArea()">コピー</button>
+    </div>
+
+    <script type="text/javascript">
+        function runGzipEncoder() {
+            const text = document.getElementById("inputTextArea").value;
+            const mode = document.getElementById("inputMode").value;
+
+            const result = main(text, mode);
+            document.getElementById("outputTextArea").value = result;
+        }
+
+        function copyTextArea() {
+            const targetText = document.getElementById("outputTextArea").value;
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(targetText)
+            } else {
+                document.getElementById("outputTextArea").select();
+                document.execCommand('copy')
+            }
+        }
+    </script>
+</body>
+</html>

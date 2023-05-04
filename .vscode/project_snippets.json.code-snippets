@@ -1,0 +1,16 @@
+{
+	"debug": {
+		"prefix": "db",
+		"description": "debugpyのデバッグ文一式",
+		"body": [
+			"# TODO: ===== debugpy start =====",
+            "import debugpy",
+            "",
+            "debugpy.listen(5678)",
+            "print(\"debugpy wait for client\")",
+            "debugpy.wait_for_client()",
+            "debugpy.breakpoint()",
+            "# TODO: ===== debugpy end ====="
+		]
+	}
+}

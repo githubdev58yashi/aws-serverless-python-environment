@@ -1,0 +1,42 @@
+[
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "publisher": "Scribner",
+        "publishedDate": "1925-04-10",
+        "isbn": "9780743273565",
+        "coverImageUrl": "https://example.com/cover/great_gatsby.jpg"
+    },
+    {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "publisher": "J. B. Lippincott & Co.",
+        "publishedDate": "1960-07-11",
+        "isbn": "9780446310789",
+        "coverImageUrl": "https://example.com/cover/to_kill_a_mockingbird.jpg"
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "publisher": "Secker & Warburg",
+        "publishedDate": "1949-06-08",
+        "isbn": "9780451524935",
+        "coverImageUrl": "https://example.com/cover/1984.jpg"
+    },
+    {
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "publisher": "T. Egerton, Whitehall",
+        "publishedDate": "1813-01-28",
+        "isbn": "9780486284736",
+        "coverImageUrl": "https://example.com/cover/pride_and_prejudice.jpg"
+    },
+    {
+        "title": "Animal Farm",
+        "author": "George Orwell",
+        "publisher": "Secker and Warburg",
+        "publishedDate": "1945-08-17",
+        "isbn": "9780451526342",
+        "coverImageUrl": "https://example.com/cover/animal_farm.jpg"
+    }
+]

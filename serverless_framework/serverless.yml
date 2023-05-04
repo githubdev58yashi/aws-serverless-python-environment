@@ -1,0 +1,56 @@
+service: project1
+# app and org for use with dashboard.serverless.com
+#app: your-app-name
+#org: your-org-name
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.9
+  stage: ${opt:stage, 'dev'}
+  region: us-east-1
+  environment:
+    ENV: ${self:provider.stage}
+
+
+plugins:
+  - serverless-prune-plugin
+  - serverless-latest-layer-version
+  - serverless-plugin-split-stacks
+
+
+custom:
+  # serverless-prune-plugin
+  prune:
+    automatic: true
+    includeLayers: true
+    number: 2
+
+layers:
+  common:
+    name: 'common-${self:provider.stage}'
+    package:
+      artifact: './lambda_layer/zip/common.zip'
+  pythonLib:
+    name: 'python-lib-${self:provider.stage}'
+    package:
+      artifact: './lambda_layer/zip/python-lib.zip'
+  pandasLib:
+    name: 'pandas-lib-${self:provider.stage}'
+    package:
+      artifact: './lambda_layer/zip/pandas-lib.zip'
+
+# 共通の設定のみ記述
+package:
+  individually: true
+  include:
+    - '../conf/main.ini'
+    - '../conf/dependencies.ini'
+  exclude:
+    - '**/*'
+
+functions:
+  - ${file(./${self:provider.stage}/api-functions.yml)}

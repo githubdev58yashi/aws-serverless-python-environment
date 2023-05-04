@@ -1,0 +1,36 @@
+# apiとして公開するlambdaを記述するyml
+get_book:
+  name: ${self:service}_${self:provider.stage}_get_book
+  handler: src/api/book/get_book/get_book.lambda_handler
+  role: arn:aws:iam::329835727523:role/lambdaRole
+  package:
+    include:
+      - '../src/api/book/get_book/get_book.py'
+  layers:
+    - { Ref: CommonLambdaLayer }
+    - { Ref: PythonLibLambdaLayer }
+  events:
+    - http:
+        method: GET
+        path: /books
+        cors: true
+        authorizer:
+            type: AWS_IAM
+
+post_book:
+  name: ${self:service}_${self:provider.stage}_post_book
+  handler: src/api/book/post_book/post_book.lambda_handler
+  role: arn:aws:iam::329835727523:role/lambdaRole
+  package:
+    include:
+      - '../src/api/book/post_book/post_book.py'
+  layers:
+    - { Ref: CommonLambdaLayer }
+    - { Ref: PythonLibLambdaLayer }
+  events:
+    - http:
+        method: POST
+        path: /books
+        cors: true
+        authorizer:
+            type: AWS_IAM

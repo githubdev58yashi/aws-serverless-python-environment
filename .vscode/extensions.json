@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+      "ms-python.black-formatter",
+      "streetsidesoftware.code-spell-checker",
+      "ms-python.vscode-pylance",
+      "njpwerner.autodocstring",
+      "ms-python.isort",
+      "MS-CEINTL.vscode-language-pack-ja",
+      "ms-python.python",
+      "ms-vscode-remote.remote-ssh",
+      "ms-vscode.live-server",
+      "yzhang.markdown-all-in-one",
+      "bierner.markdown-preview-github-styles"
+    ]
+  }

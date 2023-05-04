@@ -1,0 +1,17 @@
+[
+    {
+        "zipFileName": "common.zip",
+        "targetFolderPath": "../../../src/common/"
+    },
+    {
+        "zipFileName": "python-lib.zip",
+        "targetFileName": "requirements_python_layer.txt",
+        "exclude": [
+            "botocore"
+        ]
+    },
+    {
+        "zipFileName": "pandas-lib.zip",
+        "targetFileName": "requirements_pandas_layer.txt"
+    }
+]

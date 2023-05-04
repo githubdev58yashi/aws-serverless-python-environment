@@ -1,0 +1,13 @@
+backoff==2.2.1
+certifi==2022.12.7
+charset-normalizer==3.1.0
+gql==3.4.0
+graphql-core==3.2.3
+idna==3.4
+inflection==0.5.1
+multidict==6.0.4
+pynamodb==5.4.1
+requests==2.28.2
+requests-aws4auth==1.2.2
+requests-toolbelt==0.10.1
+yarl==1.9.1

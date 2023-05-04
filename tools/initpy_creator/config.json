@@ -1,0 +1,12 @@
+{
+    "base_dir": "/home/user/project1-back/",
+    "target_dirs": [
+        "src"
+    ],
+    "exclude_folders": [
+        "__pycache__"
+    ],
+    "exclude_dirs": [
+        "src/api/user"
+    ]
+}

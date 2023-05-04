@@ -1,0 +1,6 @@
+[
+    {
+        "zipFileName": "common.zip",
+        "targetFolderPath": "../../../src/common/"
+    }
+]
