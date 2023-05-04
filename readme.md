@@ -30,7 +30,7 @@ document/ (説明用資料等)
 logs/
 src/
   api/
-    common/ (共通クラス)
+  common/ (共通クラス)
   tests/ (pytest用。srcと階層は合わせる)
     api/
     common/
