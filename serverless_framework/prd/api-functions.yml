@@ -2,7 +2,7 @@
 get_book:
   name: ${self:service}_${self:provider.stage}_get_book
   handler: src/api/book/get_book/get_book.lambda_handler
-  role: arn:aws:iam::329835727523:role/lambdaRole
+  role: arn:aws:iam::{AWS-ACCOUNT-ID}:role/lambdaRole
   package:
     include:
       - '../src/api/book/get_book/get_book.py'
@@ -20,7 +20,7 @@ get_book:
 post_book:
   name: ${self:service}_${self:provider.stage}_post_book
   handler: src/api/book/post_book/post_book.lambda_handler
-  role: arn:aws:iam::329835727523:role/lambdaRole
+  role: arn:aws:iam::{AWS-ACCOUNT-ID}:role/lambdaRole
   package:
     include:
       - '../src/api/book/post_book/post_book.py'
